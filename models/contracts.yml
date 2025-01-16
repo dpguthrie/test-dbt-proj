@@ -41,4 +41,4 @@ models:
         data_type: number
         constraints:
           - type: not_null
-          - type: primary_key
+          - type: foreign_key
