@@ -2,40 +2,52 @@ version: 2
 
 models:
   - name: dim_customers
+    description: "Customer dimension table containing core customer attributes and demographics"
     config:
       contract:
         enforced: true
     columns:
       - name: customer_key
+        description: "Unique identifier for each customer"
         data_type: number
         constraints:
           - type: not_null
           - type: primary_key
       - name: name
+        description: "Customer's full name"
         data_type: varchar
         constraints:
           - type: not_null
       - name: address
+        description: "Customer's primary mailing address"
         data_type: varchar
       - name: nation_key
+        description: "Foreign key reference to the customer's nation"
         data_type: number
         constraints:
           - type: not_null
           - type: foreign_key
       - name: nation
+        description: "Name of the country where the customer is located"
         data_type: varchar
       - name: region_key
+        description: "Foreign key reference to the geographical region"
         data_type: number
         constraints:
           - type: not_null
           - type: foreign_key
       - name: region
+        description: "Name of the geographical region"
         data_type: varchar
       - name: phone_number
+        description: "Customer's primary contact phone number"
         data_type: varchar
       - name: account_balance
+        description: "Current balance in customer's account in local currency"
         data_type: number
       - name: market_segment
+        description: "Customer's market segment classification (e.g., RETAIL, WHOLESALE, ENTERPRISE)"
         data_type: varchar
       - name: user_id
+        description: "Internal system identifier for the customer account"
         data_type: number
