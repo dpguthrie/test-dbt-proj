@@ -39,6 +39,3 @@ models:
         data_type: varchar
       - name: user_id
         data_type: number
-        constraints:
-          - type: not_null
-          - type: foreign_key
