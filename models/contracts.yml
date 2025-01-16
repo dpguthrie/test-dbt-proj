@@ -38,4 +38,4 @@ models:
       - name: market_segment
         data_type: varchar
       - name: user_id
-        data_type: varchar
+        data_type: number
