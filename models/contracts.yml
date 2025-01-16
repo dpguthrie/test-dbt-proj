@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: dim_customers
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: customer_key
+        data_type: number
+        constraints:
+          - type: not_null
+          - type: primary_key
+      - name: name
+        data_type: varchar
+        constraints:
+          - type: not_null
+      - name: address
+        data_type: varchar
+      - name: nation_key
+        data_type: number
+        constraints:
+          - type: not_null
+          - type: foreign_key
+      - name: nation
+        data_type: varchar
+      - name: region_key
+        data_type: number
+        constraints:
+          - type: not_null
+          - type: foreign_key
+      - name: region
+        data_type: varchar
+      - name: phone_number
+        data_type: varchar
+      - name: account_balance
+        data_type: number
+      - name: market_segment
+        data_type: varchar
+      - name: user_id
+        data_type: varchar
